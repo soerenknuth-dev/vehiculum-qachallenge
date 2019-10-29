@@ -50,7 +50,7 @@ def test_homepage_search_desktop(browser):
 
   #click submit button
   submit_button.click()
-  
+
   #assert you are on the overview page and found some results
   overview_url = browser.current_url
   count = int(browser.find_element_by_class_name('vc-total-count').get_attribute('innerHTML'))
