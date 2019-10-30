@@ -19,7 +19,7 @@ def browser():
   driver.quit()
 
 
-def test_homepage_search_desktop(browser):
+def test_homepage_search_mobile(browser):
   browser.get('https://www.vehiculum.de')
 
   select_manufacturer_button = browser.find_element_by_id('select-manufacturer')
