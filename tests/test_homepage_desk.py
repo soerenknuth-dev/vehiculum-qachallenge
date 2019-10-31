@@ -31,6 +31,7 @@ def test_homepage_search_desktop(browser):
   
   #dismiss cookie message
   dismiss_cookie_message.click()
+  time.sleep(1)
 
   #select/enter search values
   select_manufacturer_button.click()
@@ -77,6 +78,7 @@ def test_homepage_hotoffer_desktop(browser):
 
   #dismiss cookie message
   dismiss_cookie_message.click()
+  time.sleep(1)
 
   #Scroll into view
   browser.execute_script("arguments[0].scrollIntoView();", hot_offers)
@@ -103,8 +105,8 @@ def test_homepage_brands_desktop(browser):
   first_brand_href_in_current_list = browser.find_element_by_xpath('/html/body/main/div/div[2]/div[2]/div/div/div/div/div/div[contains(@aria-hidden,"false")]/a[1]').get_attribute('href')
   first_brand_in_current_list.click()
 
-  pdp_url = browser.current_url
-  assert first_brand_href_in_current_list == pdp_url
+  brand_url = browser.current_url
+  assert first_brand_href_in_current_list == brand_url
 
 
 def test_homepage_other_brands_desktop(browser):

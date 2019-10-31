@@ -93,6 +93,7 @@ def test_homepage_hotoffer_mobile(browser):
   #expected part of url of current shown car
   hot_offer_url_part = "leasing-angebote/"+(hot_offers_car_manufacturer+"-"+hot_offers_car_model).replace(" ","-").lower()
   #click current shown car
+  time.sleep(0.5)
   hot_offers_car.click()
   #assert you are on the pdp of clicked car
   pdp_url = browser.current_url
